@@ -1,9 +1,9 @@
 package domain;
 
 public class Product {
-    int id;
-    String name;
-    int price;
+    private int id;
+    private String name;
+    private int price;
 
     public Product(int id, String name, int price) {
         this.id = id;
