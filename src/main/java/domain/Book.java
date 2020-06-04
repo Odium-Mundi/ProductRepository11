@@ -22,4 +22,9 @@ public class Book extends Product {
         }
         return author.equalsIgnoreCase(search);
     }
+
+    public Book(int id, String name, int price) {
+        super(id, name, price);
+    }
+
 }
