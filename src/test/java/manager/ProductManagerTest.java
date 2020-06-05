@@ -12,8 +12,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class ProductManagerTest {
     private ProductRepository repository = new ProductRepository();
     private ProductManager manager = new ProductManager(repository);
-    private Book book4 = new Book(4, "book4", 10, "Who");
-    private Smartphone smartphone2 = new Smartphone(4, "smart2", 10, "China");
     private Product book1 = new Book(1, "book1", 100, "I am");
     private Product book2 = new Book(2, "book2", 200, "I am");
     private Product book3 = new Book(3, "book3", 30, "No I am");
@@ -71,37 +69,5 @@ class ProductManagerTest {
         Product[] expected = new Product[]{};
 
         assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    void shouldSearchBookOfAuthor() {
-        boolean actual = book4.matches("Who");
-        boolean expected = true;
-
-        assertEquals(expected,actual);
-    }
-
-    @Test
-    void shouldSearchBookOfName() {
-        boolean actual = book4.matches("book4");
-        boolean expected = true;
-
-        assertEquals(expected,actual);
-    }
-
-    @Test
-    void shouldSearchSmartphoneOfProducer() {
-        boolean actual = book4.matches("China");
-        boolean expected = true;
-
-        assertEquals(expected,actual);
-    }
-
-    @Test
-    void shouldSearchSmartphoneOfName() {
-        boolean actual = book4.matches("smart2");
-        boolean expected = true;
-
-        assertEquals(expected,actual);
     }
 }
